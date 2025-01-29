@@ -15,19 +15,19 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">i-kan</h3>
             <p className="text-muted-foreground text-sm">
-              Platform e-commerce terbaik untuk kebutuhan ikan segar dan produk perikanan berkualitas
+              The best e-commerce platform for fresh fish and quality fishery products
             </p>
           </div>
 
-          {/* Layanan */}
+          {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-sm font-medium">Layanan</h4>
+            <h4 className="text-sm font-medium">Services</h4>
             <nav className="flex flex-col space-y-2">
               <Link
                 href="/track-order"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Lacak Pesanan
+                Track Order
               </Link>
               <Link
                 href="/faq"
@@ -39,7 +39,7 @@ export function Footer() {
                 href="/returns"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Pengembalian
+                Returns
               </Link>
             </nav>
           </div>
@@ -52,13 +52,13 @@ export function Footer() {
                 href="/privacy"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Kebijakan Privasi
+                Privacy Policy
               </Link>
               <Link
                 href="/terms"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Syarat & Ketentuan
+                Terms & Conditions
               </Link>
               <Link
                 href="/disclaimer"
@@ -69,13 +69,13 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Kontak */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-sm font-medium">Kontak</h4>
+            <h4 className="text-sm font-medium">Contact</h4>
             <div className="text-sm text-muted-foreground space-y-2">
               <p>support@i-kan.id</p>
               <p>(021) 1234-5678</p>
-              <p>Jl. Perikanan No. 123, Jakarta</p>
+              <p>Fishery Street No. 123, Jakarta</p>
               <div className="flex items-center gap-4 pt-2">
                 <Link href="#" className="hover:text-foreground transition-colors">
                   <FaInstagram className="h-5 w-5" />

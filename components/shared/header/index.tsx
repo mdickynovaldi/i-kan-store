@@ -5,8 +5,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FiShoppingCart, FiMenu } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 import Link from "next/link";
+
+import Menu from "./menu";
 
 export default function Header() {
   return (
@@ -21,25 +23,25 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem>
-                <a href="/" className="w-full">
+              <DropdownMenuItem asChild>
+                <Link href="/" className="w-full">
                   Beranda
-                </a>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/products" className="w-full">
+              <DropdownMenuItem asChild>
+                <Link href="/products" className="w-full">
                   Produk
-                </a>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/about" className="w-full">
+              <DropdownMenuItem asChild>
+                <Link href="/about" className="w-full">
                   Tentang Kami
-                </a>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/contact" className="w-full">
+              <DropdownMenuItem asChild>
+                <Link href="/contact" className="w-full">
                   Kontak
-                </a>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -53,26 +55,19 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
           <Button asChild variant="ghost">
-            <a href="/">Beranda</a>
+            <Link href="/">Beranda</Link>
           </Button>
           <Button asChild variant="ghost">
-            <a href="/products">Produk</a>
+            <Link href="/products">Produk</Link>
           </Button>
           <Button asChild variant="ghost">
-            <a href="/about">Tentang Kami</a>
+            <Link href="/about">Tentang Kami</Link>
           </Button>
           <Button asChild variant="ghost">
-            <a href="/contact">Kontak</a>
+            <Link href="/contact">Kontak</Link>
           </Button>
         </nav>
-
-        {/* Cart Icon */}
-        <Button variant="outline" size="icon" className="relative">
-          <FiShoppingCart className="h-6 w-6" />
-          <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-            0
-          </span>
-        </Button>
+        <Menu />
       </div>
     </header>
   );
