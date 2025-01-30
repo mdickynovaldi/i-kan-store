@@ -1,20 +1,15 @@
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 
-import Product from "@/types/model";
+import { Product } from "@/types";
 import ProductPrice from "./product-price";
 
 export default function ProductCart({ product }: { product: Product }) {
   return (
     <Card className="w-full max-w-sm hover:shadow-lg transition-shadow">
       <CardHeader className="p-0">
-        <Link href={`/products/${product.slug}`}>
+        <Link href={`/product/${product.slug}`}>
           <div className="overflow-hidden rounded-t-lg">
             <Image
               src={product.images[0]}

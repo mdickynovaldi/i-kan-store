@@ -89,6 +89,28 @@
   }
 }
 
+.carousel__item {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.carousel__item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.carousel__item.active {
+  border: 2px solid hsl(var(--primary));
+}
+
+.image-preview-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.image-preview-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
 
 @layer base {
   body {

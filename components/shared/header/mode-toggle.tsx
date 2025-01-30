@@ -15,7 +15,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
-export default function ModeToggle() {
+export function ModeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -67,3 +67,5 @@ export default function ModeToggle() {
     </DropdownMenu>
   );
 }
+
+export default ModeToggle;

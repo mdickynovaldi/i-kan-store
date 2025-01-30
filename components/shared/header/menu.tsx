@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ModeToggle from "./mode-toggle";
+import { ModeToggle } from "./mode-toggle";
 import { FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
 import { FaUser } from "react-icons/fa";

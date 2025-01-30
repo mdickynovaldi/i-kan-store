@@ -1,4 +1,4 @@
-import Product from "@/types/model";
+import { Product } from "@/types";
 import ProductCart from "./product-cart";
 
 export default function ProductList({

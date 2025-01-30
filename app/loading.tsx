@@ -4,7 +4,7 @@ import loader from "@/assets/loader.gif";
 export default function LoadingPage() {
   return (
     <div className="flex justify-center items-center h-screen w-screen">
-      <Image src={loader} height={100} width={100} alt="Loading..." />
+      <Image className="w-100 h-100" src={loader} alt="Loading..." />
     </div>
   );
 }

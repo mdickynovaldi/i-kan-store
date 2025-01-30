@@ -1,6 +1,4 @@
 "use client";
-import { SITE_NAME } from "@/lib/constants";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaHome, FaSearch } from "react-icons/fa";
@@ -14,7 +12,7 @@ export default function NotFoundPage() {
           Page Not Found
         </h2>
         <p className="text-xl text-gray-600 mb-8">
-          Sorry, we couldn't find the page you're looking for.
+          Sorry, we couldn&apos;t find the page you&apos;re looking for.
         </p>
       </div>
 
