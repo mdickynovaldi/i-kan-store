@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏪 I-KAN Store
 
-## Getting Started
+I-KAN Store is a modern e-commerce platform built with cutting-edge technology to provide an optimal shopping experience. ✨
 
-First, run the development server:
+## 🚀 Tech Stack
+
+### 🎯 Core Framework & Libraries
+
+- **Next.js v15** - React framework with powerful SSR, SSG, and routing features
+- **React v19** - JavaScript library for building user interfaces
+- **TypeScript** - JavaScript superset with static typing
+- **Tailwind CSS** - Utility-first CSS framework
+- **ShadCN UI** - Reusable and customizable UI components
+
+### 🗄️ Database & ORM
+
+- **PostgreSQL** - Powerful relational database
+- **Prisma** - Modern ORM for Node.js and TypeScript
+
+### 🔒 Authentication & Validation
+
+- **NextAuth** - Authentication solution for Next.js
+- **Zod** - Schema validation for TypeScript
+- **React Hook Form** - Form handling for React
+
+### 💰 Payment Gateway
+
+- **PayPal API** - PayPal payment integration
+- **Stripe API** - Stripe payment integration
+
+### 📤 File Upload & Visualization
+
+- **Uploadthing** - Modern file upload solution
+- **Recharts** - Data visualization library
+
+### 🛠️ Development Tools
+
+- **ESLint** - Linting tool for JavaScript/TypeScript
+- **Jest** - Testing framework for JavaScript
+
+## ⚙️ Setup & Installation
+
+1. 📥 Clone repository
+
+```bash
+git clone <repository-url>
+cd i-kan-store
+```
+
+2. 📦 Install dependencies
+
+```bash
+npm install
+```
+
+3. 🔑 Setup environment variables
+
+```bash
+cp .env.example .env
+```
+
+Required environment variables:
+
+- 🔗 DATABASE_URL
+- 🔐 NEXTAUTH_SECRET
+- 💳 PAYPAL_CLIENT_ID
+- 💰 STRIPE_SECRET_KEY
+- 📁 UPLOADTHING_SECRET
+- 🆔 UPLOADTHING_APP_ID
+
+4. 🗃️ Setup database and migrations
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+5. 🚀 Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+i-kan-store/
+├── app/                    # Next.js app router
+│   ├── (root)/            # Root layout and pages
+│   └── api/               # API routes
+├── components/
+│   ├── shared/            # Reusable components
+│   └── ui/                # Base UI components
+├── lib/                   # Utility functions and helpers
+├── prisma/               # Database schema and migrations
+├── public/               # Static assets
+└── types/                # Type definitions
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+- 🛍️ Product Catalog
+- 🔐 User Authentication
+- 🛒 Shopping Cart
+- 💳 Online Payments
+- 📦 Order Tracking
+- 📊 Admin Dashboard
+- 📱 Responsive Design
+- 🔍 Search & Filter
+- ⭐ Ratings & Reviews
+- 🌙 Dark/Light Mode
+- 🌍 Multi-language Support
+- 📨 Email Notifications
+- 🏷️ Promos & Discounts
+- 💬 Live Chat Support
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the test suite:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run test
+```
 
-## Deploy on Vercel
+## 🌟 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project can be deployed to various platforms such as Vercel, Railway, or any other platform that supports Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 License
+
+MIT License - See [LICENSE](LICENSE) for more details.
+
+## 🤝 Contributing
+
+Contributions are always welcome! Please feel free to submit a pull request or open an issue for suggestions and improvements.
+
+---
+
+Made with 💝 using Next.js and other modern technologies.
+
+🌟 Happy Shopping! 🛍️
