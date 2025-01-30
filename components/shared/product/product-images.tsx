@@ -37,8 +37,9 @@ const ProductImages = ({ images }: { images: string[] }) => {
                 className={cn(
                   "aspect-square relative border rounded-lg overflow-hidden cursor-pointer transition-all",
                   index === currentImage
-                    ? "border-2 border-primary"
-                    : "hover:border-primary"
+                    ? "border-2 border-primary dark:border-yellow-500 bg-white dark:bg-gray-800"
+                    : "hover:border-primary dark:hover:border-yellow-200 bg-gray-50 dark:bg-gray-700",
+                  "dark:bg-muted-foreground"
                 )}
                 onClick={() => setCurrentImage(index)}
               >
