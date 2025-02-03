@@ -35,7 +35,7 @@ const CredentialSignInForm = () => {
   const onSubmit = async (values: FormValues) => {
     try {
       await signInWithCredetials(values);
-    } catch (error: any) {
+    } catch (error) {
       if (isRedirectError(error)) return;
 
       toast({

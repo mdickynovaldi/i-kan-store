@@ -47,7 +47,7 @@ const CredentialSignUpForm = () => {
         });
         return;
       }
-    } catch (error: any) {
+    } catch (error) {
       if (isRedirectError(error)) return;
 
       toast({
