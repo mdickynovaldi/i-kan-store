@@ -11,6 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { CiMenuKebab } from "react-icons/ci";
+import UserButton from "./user-button";
 
 export default function Menu() {
   return (
@@ -29,11 +30,7 @@ export default function Menu() {
                 0
               </span>
             </Button>
-            <Button asChild variant="default">
-              <Link href="/sign-in">
-                <FaUser className="h-6 w-6" /> Sign In
-              </Link>
-            </Button>
+            <UserButton />
           </div>
         </nav>
         <nav className="md:hidden">
@@ -52,11 +49,7 @@ export default function Menu() {
                   </span>
                 </Link>
               </Button>
-              <Button asChild variant="default">
-                <Link href="/sign-in">
-                  <FaUser className="h-6 w-6" /> Sign In
-                </Link>
-              </Button>
+              <UserButton />
               <SheetDescription></SheetDescription>
             </SheetContent>
           </Sheet>

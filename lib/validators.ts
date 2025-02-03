@@ -20,3 +20,34 @@ export const insertProductSchema = z.object({
   banner: z.string().nullable(),
   price: currency,
 });
+
+// Schema for sign in users in
+
+export const signInSchema = z.object({
+  email: z.string().email("Invalid email"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+  // .refine(
+  //   (value) => /[A-Z]/.test(value),
+  //   "Password must contain at least 1 capital letter"
+  // )
+  // .refine(
+  //   (value) => /[^A-Za-z0-9]/.test(value),
+  //   "Password must contain at least 1 symbol"
+  // ),
+});
+
+// Schema for sign up users
+
+export const signUpSchema = z
+  .object({
+    name: z.string().min(3, "Name must be at least 3 characters"),
+    email: z.string().email("Invalid email"),
+    password: z.string().min(8, "Password must be at least 8 characters"),
+    confirmPassword: z
+      .string()
+      .min(8, "Password must be at least 8 characters"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Password and confirm password must match",
+    path: ["confirmPassword"],
+  });
